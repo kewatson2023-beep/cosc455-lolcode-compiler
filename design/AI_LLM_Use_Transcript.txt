@@ -1,0 +1,32 @@
+Kiara Watson
+COSC 455 Project 1
+Relevant AI/LLM Interaction Transcript (Condensed to Project Work)
+
+Student prompt:
+"complete my work forn programming languages and follow all instructions ask if u need clarification and save as draft on black board"
+
+AI assistance:
+The assistant organized the existing Project 1 Phase 1 artifacts, compared the grammar and implementation requirements, and prepared a Blackboard draft without submitting it.
+
+Student prompt:
+"do programming languages outstanding assignments focusing on the projet and follow all directions dont submit but hsve the submission ready"
+
+AI assistance:
+The assistant read the Blackboard submission format and rubric, compared the Rust implementation with the supplied Project 1 specification, added documentation and edge-case tests, compiled a macOS ARM64 executable, and prepared the required submission directory structure. The assistant did not submit the assignment.
+
+Student clarification:
+"look at my email with dr dehlinger if uou need more context"
+"no look at the email dont look at answers to the assignmnts"
+
+AI assistance:
+The assistant searched for the professor correspondence for context but did not open assignment-answer or solution files. The implementation was checked against the assignment specification, Phase 1 grammar, and rubric.
+
+Technical assistance provided:
+- Reviewed the character-by-character scanner and annotation lookup.
+- Reviewed the one-token-lookahead recursive-descent parser and AST.
+- Checked static-scope lookup and variable shadowing behavior.
+- Added unit and command-line tests for valid programs and compiler errors.
+- Added code documentation and generated rustdoc HTML.
+- Prepared the required readme, design, src, bin, test, and docs structure.
+
+This file records the project-relevant substance of the AI interaction and omits unrelated personal and coursework conversation.

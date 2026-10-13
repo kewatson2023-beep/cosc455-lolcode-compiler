@@ -1,0 +1,143 @@
+Kiara Watson
+COSC 455
+Project 1 Phase 1
+LOLCODE Markdown Grammar in Plain BNF
+
+Start symbol: <lolcode>
+
+<lolcode> ::= "#HAI" <document-content> "#KBYE"
+
+<document-content> ::= <variable-definition> <body>
+                     | <comment> <after-leading-comment>
+                     | <head> <body>
+                     | <non-comment-body-element> <body>
+                     | epsilon
+
+<after-leading-comment> ::= <comment> <after-leading-comment>
+                          | <head> <body>
+                          | <non-comment-body-element> <body>
+                          | epsilon
+
+<optional-variable-definition> ::= <variable-definition>
+                                 | epsilon
+
+<comment-sequence> ::= <comment> <comment-sequence>
+                     | epsilon
+
+<head> ::= "#MAEK HEAD" <head-content> "#MKAY"
+
+<head-content> ::= <comment> <head-content>
+                 | <title> <comments-after-title>
+                 | epsilon
+
+<comments-after-title> ::= <comment> <comments-after-title>
+                         | epsilon
+
+<title> ::= "#GIMMEH TITLE" <plain-text> "#OIC"
+
+<body> ::= <body-element> <body>
+         | epsilon
+
+<body-element> ::= <comment>
+                 | <non-comment-body-element>
+
+<non-comment-body-element> ::= <paragraph>
+                 | <bold>
+                 | <list>
+                 | <newline-annotation>
+                 | <link>
+                 | <variable-use>
+                 | <text-atom>
+
+<paragraph> ::= "#MAEK PARAGRAF" <optional-variable-definition> <paragraph-body> "#MKAY"
+
+<paragraph-body> ::= <paragraph-element> <paragraph-body>
+                   | epsilon
+
+<paragraph-element> ::= <comment>
+                      | <bold>
+                      | <list>
+                      | <newline-annotation>
+                      | <link>
+                      | <variable-use>
+                      | <text-atom>
+
+<bold> ::= "#GIMMEH BOLD" <bold-body> "#OIC"
+
+<bold-body> ::= <bold-element> <bold-body>
+              | epsilon
+
+<bold-element> ::= <variable-use>
+                 | <text-atom>
+
+<list> ::= "#MAEK LIST" <list-items> "#MKAY"
+
+<list-items> ::= <item> <additional-list-items>
+
+<additional-list-items> ::= <item> <additional-list-items>
+                          | <comment> <additional-list-items>
+                          | epsilon
+
+<item> ::= "#GIMMEH ITEM" <optional-variable-definition> <item-body> "#OIC"
+
+<item-body> ::= <item-element> <item-body>
+              | epsilon
+
+<item-element> ::= <comment>
+                 | <bold>
+                 | <variable-use>
+                 | <text-atom>
+
+<comment> ::= "#OBTW" <optional-plain-text> "#TLDR"
+
+<newline-annotation> ::= "#NEWLINE"
+
+<link> ::= "#GIMMEH LINX" <plain-text> "#OIC"
+
+<variable-definition> ::= "#IHAZ" <variable-name> "#ITIZ" <plain-text> "#MKAY"
+
+<variable-use> ::= "#GIMMEH VAR" <variable-name> "#OIC"
+
+<variable-name> ::= <alphanumeric> <variable-name-tail>
+
+<variable-name-tail> ::= <alphanumeric> <variable-name-tail>
+                       | epsilon
+
+<plain-text> ::= <text-atom> <plain-text-tail>
+
+<plain-text-tail> ::= <text-atom> <plain-text-tail>
+                    | epsilon
+
+<optional-plain-text> ::= <plain-text>
+                        | epsilon
+
+<text-atom> ::= <word>
+              | <punctuation>
+
+<word> ::= <alphanumeric> <word-tail>
+
+<word-tail> ::= <alphanumeric> <word-tail>
+              | epsilon
+
+<alphanumeric> ::= <letter>
+                 | <digit>
+
+<letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M"
+           | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
+           | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m"
+           | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<punctuation> ::= "," | "." | "\"" | ":" | "?" | "!" | "%" | "=" | "/"
+
+Notes:
+1. Annotation terminals are matched without regard to letter case.
+2. The lexer treats each complete annotation, such as "#MAEK PARAGRAF", as one token.
+3. A variable definition is permitted only at the beginning of its enclosing document, paragraph, or list-item block. A head contains only comments and an optional title, as required by the project description.
+4. A list must begin with an item because <list-items> has no epsilon production.
+5. Repeated #HAI and #KBYE annotations cannot be derived inside <body>.
+6. The # character is reserved for annotations and is not part of <text-atom>.
+7. If a document-level variable definition occurs immediately after #HAI, a head cannot follow it because a head may be separated from #HAI only by comments.
+8. <document-content> and <after-leading-comment> keep the start of the document predictive with one-token lookahead: a variable definition, comment, head, ordinary body element, or #KBYE each selects one production.
+9. Ordinary spaces, tabs, and source-file line breaks are lexical separators and are placed on the hidden channel by the ANTLR recognizer. The explicit #NEWLINE annotation represents an HTML line break, and the project does not require preserving source formatting whitespace.
