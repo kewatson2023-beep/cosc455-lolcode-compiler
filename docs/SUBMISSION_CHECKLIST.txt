@@ -13,8 +13,8 @@ READY
 [x] Blackboard submission has not been submitted
 
 REQUIRED BEFORE FINAL SUBMISSION
-[ ] Sign in to GitHub, create a public repository, and push the prepared local repository
-[ ] Replace the PENDING line in readme.txt with the public repository URL
+[x] Public GitHub repository created and local commit history pushed
+[x] Public repository URL added to readme.txt
 [ ] After October 26, add the professor's released tests and completed self-grading form to test/
 [ ] Re-run both test commands and update docs/TEST_REPORT.txt if results change
 [ ] Rebuild the final ZIP and upload/save it in Blackboard without pressing Submit until reviewed

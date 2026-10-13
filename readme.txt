@@ -2,7 +2,7 @@ Kiara Watson
 COSC 455 Project 1 - LOLCODE Markdown Compiler
 
 Public GitHub repository:
-PENDING - add the public repository URL after GitHub sign-in.
+https://github.com/kewatson2023-beep/cosc455-lolcode-compiler
 
 Target operating system:
 macOS on Apple silicon (ARM64). The executable is named lolcompiler and is stored in bin/.
