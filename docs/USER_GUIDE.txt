@@ -1,0 +1,21 @@
+Kiara Watson - LOLCODE Markdown Compiler User Guide
+
+SYSTEM
+The included executable targets macOS on Apple silicon (ARM64).
+
+RUNNING THE COMPILER
+1. Open Terminal in the project directory.
+2. Run: ./bin/lolcompiler path/to/input.lol
+3. A successful compilation creates an HTML file beside the input file and opens it in the default browser.
+
+BUILDING FROM SOURCE
+Run: cargo build --release
+The rebuilt executable will be target/release/lolcompiler.
+
+ERRORS
+The compiler reports usage, lexical, syntax, and static-semantic errors in the terminal. An unsuccessful compilation does not leave an HTML output file.
+
+TESTING
+Run: cargo test
+Run: ./test/run_tests.sh ./bin/lolcompiler
+Set LOLCODE_NO_OPEN=1 when manually testing if browser windows are not wanted.

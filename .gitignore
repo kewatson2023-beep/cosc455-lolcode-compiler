@@ -2,3 +2,5 @@
 *.html
 !docs/rustdoc/**/*.html
 .DS_Store
+
+/docs/rustdoc/

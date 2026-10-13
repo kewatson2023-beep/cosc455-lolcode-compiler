@@ -1,0 +1,25 @@
+Kiara Watson - COSC 455 Project 1 Test Report
+
+Rust unit tests: 18 passed, 0 failed.
+Command-line .lol cases: 15 passed, 0 failed.
+
+Coverage includes:
+- Every LOLCODE Markdown annotation
+- Case-insensitive annotations
+- Comments and head/title placement
+- Paragraphs, bold text, links, lists, and list items
+- Document, paragraph, and item variable scopes
+- Inner-scope shadowing and outer-scope restoration
+- Empty valid documents
+- Unknown annotations
+- Undefined variables
+- Empty lists
+- Items outside lists
+- Nested paragraphs
+- Late variable definitions
+- Titles outside heads
+- Missing closing annotations
+- Content after #KBYE
+- Removal of stale HTML after a failed compilation
+
+The professor's official grading test files and self-grading form are scheduled for release on October 26, 2026. They were not available when this report was prepared on October 13, 2026 and must be added to test/ after release.
