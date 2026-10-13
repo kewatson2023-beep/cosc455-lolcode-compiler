@@ -1,0 +1,1 @@
+The Project 1 specification states that the instructor's grading test cases and self-grading form will be released on October 26, 2026. They were not yet available on October 13, 2026. Add the released files and completed form to this directory before the November 2 submission.

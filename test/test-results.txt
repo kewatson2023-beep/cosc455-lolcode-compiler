@@ -1,0 +1,18 @@
+PASS valid: valid_all_features.lol
+PASS valid: valid_case_insensitive.lol
+PASS valid: valid_empty.lol
+PASS valid: valid_head_comments.lol
+PASS valid: valid_item_scope.lol
+PASS valid: valid_static_scope.lol
+PASS invalid: invalid_after_kbye.lol
+PASS invalid: invalid_empty_list.lol
+PASS invalid: invalid_item_outside_list.lol
+PASS invalid: invalid_late_variable.lol
+PASS invalid: invalid_missing_close.lol
+PASS invalid: invalid_nested_paragraph.lol
+PASS invalid: invalid_title_outside_head.lol
+PASS invalid: invalid_undefined_variable.lol
+PASS invalid: invalid_unknown_annotation.lol
+
+Passed: 15
+Failed: 0
