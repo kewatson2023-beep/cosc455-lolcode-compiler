@@ -1,0 +1,20 @@
+Kiara Watson - Project 1 Submission Checklist
+
+READY
+[x] readme.txt created with macOS target and AI-use disclosure
+[x] design/ contains BNF, ANTLR, lexical state machine, Phase 1 evidence, and AI transcript
+[x] src/ contains the Rust source code
+[x] bin/ contains the macOS ARM64 lolcompiler executable
+[x] test/ contains independent valid and invalid input cases plus results
+[x] docs/ contains a user guide, test report, and generated rustdoc documentation
+[x] Rust unit tests pass: 18 of 18
+[x] Command-line tests pass: 15 of 15
+[x] Local Git repository contains four informative commits
+[x] Blackboard submission has not been submitted
+
+REQUIRED BEFORE FINAL SUBMISSION
+[ ] Sign in to GitHub, create a public repository, and push the prepared local repository
+[ ] Replace the PENDING line in readme.txt with the public repository URL
+[ ] After October 26, add the professor's released tests and completed self-grading form to test/
+[ ] Re-run both test commands and update docs/TEST_REPORT.txt if results change
+[ ] Rebuild the final ZIP and upload/save it in Blackboard without pressing Submit until reviewed
