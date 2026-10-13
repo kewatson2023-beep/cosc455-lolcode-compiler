@@ -1,0 +1,10 @@
+[package]
+name = "lolcode-compiler"
+version = "1.0.0"
+edition = "2021"
+authors = ["Kiara Watson"]
+description = "COSC 455 LOLCODE Markdown compiler"
+
+[[bin]]
+name = "lolcompiler"
+path = "src/main.rs"

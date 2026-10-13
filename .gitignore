@@ -1,0 +1,4 @@
+/target/
+*.html
+!docs/rustdoc/**/*.html
+.DS_Store
